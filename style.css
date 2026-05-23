@@ -685,6 +685,68 @@ body.dark  .icon-sun  { display: none; }
   margin-bottom: 24px;
 }
 
+/* ── CERTIFICATES ─────────────────────────────────────────── */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+}
+
+.certificate-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: 28px;
+  align-items: center;
+  padding: 28px;
+}
+
+.certificate-image-wrap {
+  overflow: hidden;
+  border: var(--border-w) solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.certificate-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.certificate-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.certificate-label {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border: 2px solid var(--border);
+  border-radius: 100px;
+  background: var(--accent-2);
+  color: var(--text);
+}
+
+.certificate-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  letter-spacing: 1px;
+  color: var(--text);
+}
+
+.certificate-desc {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
 /* ── EXPERIENCE / EDUCATION ───────────────────────────────── */
 .experience-groups {
   display: grid;
@@ -983,6 +1045,7 @@ body.dark .footer {
   .about-stats  { flex-direction: row; }
   .stat-card    { flex: 1; }
   .contact-grid { grid-template-columns: 1fr; }
+  .certificate-card { grid-template-columns: 1fr; }
   .experience-groups { grid-template-columns: 1fr; }
   .hero-container { gap: 32px; }
   .photo-card   { width: 240px; height: 290px; }

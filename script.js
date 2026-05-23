@@ -11,6 +11,7 @@ const translations = {
     "nav.about":      "Tentang",
     "nav.skills":     "Keahlian",
     "nav.projects":   "Proyek",
+    "nav.certificates": "Sertifikat",
     "nav.experience": "Pengalaman",
     "nav.contact":    "Kontak",
 
@@ -51,6 +52,13 @@ const translations = {
     "proj3.title":    "Landing Page UI",
     "proj3.desc":     "Landing page statis yang didesain dengan konsep clean dan modern. Fokus pada tipografi, warna, dan layout yang responsif.",
     "proj.view":      "Lihat Proyek →",
+
+    /* Certificates */
+    "cert.title":        "Sertifikat",
+    "cert.desc":         "Sertifikat dan pelatihan yang pernah saya ikuti.",
+    "cert.badge":        "Sertifikat",
+    "cert.barista.title": "Sertifikat Barista",
+    "cert.barista.desc": "Pelatihan barista yang mengasah kemampuan dasar penyajian kopi, pelayanan, dan standar kerja profesional.",
 
     /* Experience */
     "exp.title":          "Pengalaman & Pendidikan",
@@ -93,6 +101,7 @@ const translations = {
     "nav.about":      "About",
     "nav.skills":     "Skills",
     "nav.projects":   "Projects",
+    "nav.certificates": "Certificates",
     "nav.experience": "Experience",
     "nav.contact":    "Contact",
 
@@ -133,6 +142,13 @@ const translations = {
     "proj3.title":    "Landing Page UI",
     "proj3.desc":     "A static landing page designed with a clean and modern concept. Focused on typography, color, and responsive layout.",
     "proj.view":      "View Project →",
+
+    /* Certificates */
+    "cert.title":        "Certificates",
+    "cert.desc":         "Certificates and training programs I have completed.",
+    "cert.badge":        "Certificate",
+    "cert.barista.title": "Barista Certificate",
+    "cert.barista.desc": "Barista training that strengthened my basic coffee preparation, service, and professional workplace standards.",
 
     /* Experience */
     "exp.title":          "Experience & Education",
@@ -309,7 +325,7 @@ function showToast(message) {
 function initFadeIn() {
   // Add fade-in class to animatable elements
   const targets = document.querySelectorAll(
-    ".neu-card, .hero-text, .hero-photo-wrap, .skill-badge, .project-card, .timeline-item, .section-header"
+    ".neu-card, .hero-text, .hero-photo-wrap, .skill-badge, .project-card, .certificate-card, .timeline-item, .section-header"
   );
 
   targets.forEach((el, i) => {
