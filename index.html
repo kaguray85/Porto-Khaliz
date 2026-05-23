@@ -1,283 +1,447 @@
-﻿<!DOCTYPE html>
-<html lang="id" data-theme="dark">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muhammad Khaliz | Portofolio</title>
-  <meta name="description" content="Portfolio Muhammad Khaliz Hakam, web developer yang membangun aplikasi web modern dengan HTML, CSS, JavaScript, PHP, dan MySQL." />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <title>KHALIZ — Web Developer Portfolio</title>
+  <link rel="icon" type="image/png" href="assets/favicon-khaliz.png" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Bebas Neue (display) + DM Mono (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
-<body>
-  <div class="noise-overlay" aria-hidden="true"></div>
+<body class="light" data-lang="id">
 
-  <header class="site-header" id="navbar">
-    <nav class="nav-container" aria-label="Primary navigation">
-      <a href="#home" class="brand">
-        <span class="brand-mark"><img src="favicon.svg" alt="" aria-hidden="true"></span>
-        <span><span class="accent-dot"></span></span>
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="KHALIZ home">
+        <img src="assets/favicon-khaliz.png" alt="KHALIZ logo" class="nav-logo-img" />
       </a>
 
-      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <ul class="nav-menu" id="nav-menu">
-        <li><a href="#home" data-locale-key="navHome">Beranda</a></li>
-        <li><a href="#about" data-locale-key="navAbout">Tentang</a></li>
-        <li><a href="#skills" data-locale-key="navSkills">Keahlian</a></li>
-        <li><a href="#projects" data-locale-key="navProjects">Proyek</a></li>
-        <li><a href="#contact" data-locale-key="navContact">Kontak</a></li>
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"   class="nav-link" data-i18n="nav.about">Tentang</a></li>
+        <li><a href="#skills"  class="nav-link" data-i18n="nav.skills">Keahlian</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Proyek</a></li>
+        <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Pengalaman</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Kontak</a></li>
       </ul>
 
-      <div class="nav-actions">
-        <div class="nav-controls" aria-label="Theme and language controls">
-          <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
-            <span class="theme-icon theme-icon-sun" aria-hidden="true">&#9728;&#65039;</span>
-            <span class="theme-icon theme-icon-moon" aria-hidden="true">&#127769;</span>
-          </button>
-          <div class="locale-switcher" role="group" aria-label="Language switcher">
-            <button type="button" class="locale-option is-active" data-locale="id" aria-label="Bahasa Indonesia" aria-pressed="true">
-              <svg class="locale-flag" viewBox="0 0 22 16" aria-hidden="true">
-                <rect width="22" height="8" fill="#e70011"></rect>
-                <rect y="8" width="22" height="8" fill="#ffffff"></rect>
-              </svg>
-            </button>
-            <button type="button" class="locale-option" data-locale="en" aria-label="English" aria-pressed="false">
-              <svg class="locale-flag" viewBox="0 0 22 16" aria-hidden="true">
-                <rect width="22" height="16" fill="#ffffff"></rect>
-                <g fill="#b22234">
-                  <rect width="22" height="1.23"></rect>
-                  <rect y="2.46" width="22" height="1.23"></rect>
-                  <rect y="4.92" width="22" height="1.23"></rect>
-                  <rect y="7.38" width="22" height="1.23"></rect>
-                  <rect y="9.84" width="22" height="1.23"></rect>
-                  <rect y="12.3" width="22" height="1.23"></rect>
-                  <rect y="14.76" width="22" height="1.24"></rect>
-                </g>
-                <rect width="9.5" height="8.6" fill="#3c3b6e"></rect>
-                <g fill="#ffffff">
-                  <circle cx="1.3" cy="1.25" r=".42"></circle><circle cx="3.1" cy="1.25" r=".42"></circle><circle cx="4.9" cy="1.25" r=".42"></circle><circle cx="6.7" cy="1.25" r=".42"></circle><circle cx="8.5" cy="1.25" r=".42"></circle>
-                  <circle cx="2.2" cy="2.55" r=".42"></circle><circle cx="4" cy="2.55" r=".42"></circle><circle cx="5.8" cy="2.55" r=".42"></circle><circle cx="7.6" cy="2.55" r=".42"></circle>
-                  <circle cx="1.3" cy="3.85" r=".42"></circle><circle cx="3.1" cy="3.85" r=".42"></circle><circle cx="4.9" cy="3.85" r=".42"></circle><circle cx="6.7" cy="3.85" r=".42"></circle><circle cx="8.5" cy="3.85" r=".42"></circle>
-                  <circle cx="2.2" cy="5.15" r=".42"></circle><circle cx="4" cy="5.15" r=".42"></circle><circle cx="5.8" cy="5.15" r=".42"></circle><circle cx="7.6" cy="5.15" r=".42"></circle>
-                  <circle cx="1.3" cy="6.45" r=".42"></circle><circle cx="3.1" cy="6.45" r=".42"></circle><circle cx="4.9" cy="6.45" r=".42"></circle><circle cx="6.7" cy="6.45" r=".42"></circle><circle cx="8.5" cy="6.45" r=".42"></circle>
-                </g>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <a href="#contact" class="hire-btn" data-locale-key="hireMe">Hire Me</a>
+      <!-- Controls -->
+      <div class="nav-controls">
+        <!-- Language Toggle -->
+        <button class="lang-toggle" id="langToggle" title="Toggle Language" aria-label="Toggle Language">
+          <span class="lang-label" id="langLabel">ID</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        </button>
+
+        <!-- Hamburger Menu (Mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Open Menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
-  <main>
-    <section class="hero section" id="home">
-      <div class="container hero-grid">
-        <div class="hero-content reveal-up">
-          <div class="availability-badge">
-            <span></span>
-            <strong data-locale-key="availability">Tersedia untuk pekerjaan freelance</strong>
-          </div>
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-container">
 
-          <div class="hero-heading-row">
-            <div class="hero-profile">
-              <img src="assets/profile-khaliz.jpg" alt="Foto profil Muhammad Khaliz Hakam">
-            </div>
-
-            <h1 class="hero-title">
-              <span data-locale-key="heroGreeting">Hai, saya</span><br>
-              <span class="gradient-text">Khaliz</span><br>
-              <span class="muted-title">Hakam</span>
-            </h1>
-          </div>
-
-          <div class="role-line">
-            <span data-locale-key="roleTitle">Web Developer</span>
-            <i></i>
-          </div>
-
-          <p class="hero-description" data-locale-key="heroIntro">Saya membangun aplikasi web modern berperforma tinggi, dari frontend yang rapi sampai backend PHP yang solid. Kode bersih. Hasil nyata.</p>
-
-          <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary"><span data-locale-key="viewProjects">Lihat Proyek</span> </a>
-            <a href="#contact" class="btn btn-outline" data-locale-key="contactMe">Hubungi Saya</a>
-          </div>
-
-          <div class="stats-row">
-            <div><strong class="gradient-text">3+</strong><span data-locale-key="statYearsStudy">Tahun Belajar</span></div>
-            <div><strong class="gradient-text">3+</strong><span data-locale-key="statProjectsDone">Proyek Selesai</span></div>
-            <div><strong class="gradient-text">8+</strong><span data-locale-key="statTechnologies">Teknologi</span></div>
-          </div>
-        </div>
-
-        <div class="hero-visual reveal-right">
-          <div class="code-card glass-card">
-            <div class="window-bar">
-              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-              <small>Gynn.html</small>
-            </div>
-            <pre><code><span class="purple">class</span> <span class="blue">Developer</span> {
-  <span class="comment">// Muhammad Khaliz Hakam</span>
-  <span class="purple">public</span> <span class="blue">$name</span> = <span class="green">"Khaliz"</span>;
-  <span class="purple">public</span> <span class="blue">$role</span> = <span class="green">"Web Developer"</span>;
-
-  <span class="purple">public function</span> <span class="yellow">skills</span>(): <span class="blue">array</span>
-  {
-    <span class="purple">return</span> [
-      <span class="green">"PHP"</span>, <span class="green">"MySQL"</span>,
-      <span class="green">"HTML"</span>, <span class="green">"CSS"</span>,
-      <span class="green">"JavaScript"</span>,
-    ];
-  }
-}</code></pre>
-          </div>
-          <div class="float-tag tag-top">&lt;/&gt; Clean Code</div>
-          <div class="float-tag tag-bottom">Fast & Responsive</div>
+      <!-- Left: Text Content -->
+      <div class="hero-text">
+        <div class="hero-badge" data-i18n="hero.badge">👋 Halo, Saya</div>
+        <h1 class="hero-name">KHALIZ</h1>
+        <h2 class="hero-role" data-i18n="hero.role">Web Developer</h2>
+        <p class="hero-desc" data-i18n="hero.desc">
+          Seorang beginner programmer yang suka membangun website yang bersih, modern, dan bermanfaat. Sedang belajar dan terus berkembang.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.btn.projects">Lihat Proyek</a>
+          <a href="#contact" class="btn btn-secondary" data-i18n="hero.btn.contact">Hubungi Saya</a>
         </div>
       </div>
-    </section>
 
-    <section class="section about-section" id="about">
-      <div class="container">
-        <div class="section-heading reveal-up">
-          <span>01.</span>
-          <h2 data-locale-key="aboutTitle">Tentang Saya</h2>
-          <i></i>
+      <!-- Right: Profile Photo Card -->
+      <div class="hero-photo-wrap">
+        <div class="photo-card">
+          <img src="assets/profile-khaliz.jpg" alt="Muhammad Khaliz Hakam" class="profile-img" onerror="this.style.display='none';document.getElementById('photo-fallback').style.display='flex'" />
+          <!-- Fallback jika foto belum ada -->
+          <div class="photo-fallback" id="photo-fallback">
+            <span class="fallback-initial">KH</span>
+          </div>
+          <div class="photo-sticker" data-i18n="hero.sticker">Developer</div>
         </div>
-
-        <div class="about-grid">
-          <article class="glass-card bio-card reveal-up">
-            <p data-locale-html="aboutBioOne">Saya adalah <strong>Muhammad Khaliz Hakam</strong>, seorang web developer muda yang passionate dalam membangun aplikasi web modern. Saya menempuh pendidikan di Universitas Indraprasta PGRI jurusan Teknik Informatika, sebelumnya bersekolah di SMK Karya Teladan jurusan Akuntansi.</p>
-            <p data-locale-key="aboutBioTwo">Dengan dasar yang kuat di bidang akuntansi dan pengembangan web, saya membawa perspektif unik untuk memahami logika bisnis sekaligus membangun solusi teknologi yang efisien dan skalabel.</p>
-            <p data-locale-key="aboutBioThree">Saya aktif di komunitas Karang Taruna dan IRMI, yang melatih kemampuan kepemimpinan, kerja tim, dan manajemen acara saya di dunia nyata.</p>
-            <div class="info-grid">
-              <div><small>&#128205; Location</small><strong>Jakarta Selatan, DKI Jakarta</strong></div>
-              <div><small>&#127891; Degree</small><strong>Teknik Informatika</strong></div>
-              <div><small>&#127979; University</small><strong>Unindra PGRI</strong></div>
-              <div><small>&#128231; Email</small><strong>khalizhakam85@gmail.com</strong></div>
-            </div>
-          </article>
-
-          <aside class="timeline reveal-right">
-            <h3 data-locale-key="educationTitle">Pendidikan</h3>
-            <div class="timeline-card blue-card">
-              <small>Present</small>
-              <strong>Universitas Indraprasta PGRI</strong>
-              <span>Teknik Informatika</span>
-            </div>
-            <div class="timeline-card purple-card">
-              <small>2020 - 2023</small>
-              <strong>SMK Karya Teladan</strong>
-              <span>Accountancy</span>
-            </div>
-            <h3 data-locale-key="experienceTitle">Pengalaman</h3>
-            <div class="timeline-card green-card">
-              <small>Feb 2022 - May 2022</small>
-              <strong>Jakarta Konsultan Indonesia</strong>
-              <span>Microsoft Excel & Accounting</span>
-            </div>
-          </aside>
-        </div>
+        <!-- Dekoratif -->
+        <div class="photo-deco deco-1">✦</div>
+        <div class="photo-deco deco-2">★</div>
       </div>
-    </section>
 
-    <section class="section skills-section" id="skills">
-      <div class="container">
-        <div class="section-heading reveal-up">
-          <span>02.</span>
-          <h2 data-locale-key="skillsTitle">Keahlian</h2>
-          <i></i>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint">
+      <span class="scroll-text" data-i18n="hero.scroll">Scroll ke bawah</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ME ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="about.tag">01</span>
+        <h2 class="section-title" data-i18n="about.title">Tentang Saya</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card neu-card">
+          <p class="about-text" data-i18n="about.text">
+            Halo! Saya <strong>Muhammad Khaliz Hakam</strong>, mahasiswa Teknik Informatika di Universitas Indraprasta PGRI, Jakarta. Saya memulai perjalanan di dunia programming dengan semangat besar untuk membangun website yang tidak hanya terlihat bagus, tetapi juga bermanfaat.
+          </p>
+          <p class="about-text" data-i18n="about.text2">
+            Latar belakang saya di bidang Akuntansi dari SMK Karya Teladan memberi saya kemampuan analitis yang kuat. Sekarang saya menggabungkannya dengan kecintaan saya pada teknologi untuk berkembang di dunia web development.
+          </p>
+          <div class="about-facts">
+            <div class="fact-item">
+              <span class="fact-icon">📍</span>
+              <span>Jakarta Selatan, Indonesia</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-icon">🎓</span>
+              <span data-i18n="about.studying">Teknik Informatika</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-icon">💌</span>
+              <span>khalizhakam85@gmail.com</span>
+            </div>
+          </div>
         </div>
-
-        <div class="skills-grid reveal-up">
-          <div class="skill-group glass-card">
-            <h3>Frontend</h3>
-            <div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Tailwind</span><span>React</span></div>
+        <div class="about-stats">
+          <div class="stat-card neu-card">
+            <div class="stat-number">3+</div>
+            <div class="stat-label" data-i18n="about.stat.org">Organisasi</div>
           </div>
-          <div class="skill-group glass-card">
-            <h3>Backend</h3>
-            <div class="chips"><span>PHP</span><span>MySQL</span><span>Laravel</span><span>REST API</span></div>
+          <div class="stat-card neu-card">
+            <div class="stat-number">9+</div>
+            <div class="stat-label" data-i18n="about.stat.skills">Keahlian</div>
           </div>
-          <div class="skill-group glass-card">
-            <h3>Soft Skills</h3>
-            <div class="chips"><span>Disiplin</span><span>Jujur</span><span>Kerja Sama Tim</span><span>Pemecahan Masalah</span></div>
+          <div class="stat-card neu-card">
+            <div class="stat-number">∞</div>
+            <div class="stat-label" data-i18n="about.stat.learning">Semangat Belajar</div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section projects-section" id="projects">
-      <div class="container">
-        <div class="section-heading reveal-up">
-          <span>03.</span>
-          <h2 data-locale-key="projectsTitle">Proyek</h2>
-          <i></i>
+  <!-- ========== SKILLS ========== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02</span>
+        <h2 class="section-title" data-i18n="skills.title">Keahlian</h2>
+      </div>
+      <p class="section-desc" data-i18n="skills.desc">Teknologi dan tools yang sedang saya pelajari dan gunakan.</p>
+      <div class="skills-grid">
+
+        <!-- Skill badges -->
+        <div class="skill-badge neu-card">
+          <span class="skill-icon">🌐</span>
+          <span class="skill-name">HTML</span>
+          <span class="skill-level" data-i18n="skill.basic">Basic</span>
         </div>
-        <p class="section-intro" data-locale-key="projectsIntro">Pilihan karya yang sedang saya bangun.</p>
+        <div class="skill-badge neu-card">
+          <span class="skill-icon">🎨</span>
+          <span class="skill-name">CSS</span>
+          <span class="skill-level" data-i18n="skill.basic">Basic</span>
+        </div>
+        <div class="skill-badge neu-card">
+          <span class="skill-icon">⚡</span>
+          <span class="skill-name">JavaScript</span>
+          <span class="skill-level" data-i18n="skill.learning">Learning</span>
+        </div>
+        <div class="skill-badge neu-card">
+          <span class="skill-icon">🐘</span>
+          <span class="skill-name">PHP</span>
+          <span class="skill-level" data-i18n="skill.learning">Learning</span>
+        </div>
+        <div class="skill-badge neu-card">
+          <span class="skill-icon">☕</span>
+          <span class="skill-name">Java</span>
+          <span class="skill-level" data-i18n="skill.learning">Learning</span>
+        </div>
+        <div class="skill-badge neu-card">
+          <span class="skill-icon">🗄️</span>
+          <span class="skill-name">MySQL</span>
+          <span class="skill-level" data-i18n="skill.basic">Basic</span>
+        </div>
+        <div class="skill-badge neu-card">
+          <span class="skill-icon">🖌️</span>
+          <span class="skill-name">UI/UX Design</span>
+          <span class="skill-level" data-i18n="skill.learning">Learning</span>
+        </div>
+        <div class="skill-badge neu-card">
+          <span class="skill-icon">🔀</span>
+          <span class="skill-name">Git</span>
+          <span class="skill-level" data-i18n="skill.basic">Basic</span>
+        </div>
+        <div class="skill-badge neu-card">
+          <span class="skill-icon">📱</span>
+          <span class="skill-name">Responsive Design</span>
+          <span class="skill-level" data-i18n="skill.learning">Learning</span>
+        </div>
+        <div class="skill-badge neu-card soft-skill">
+          <span class="skill-icon">📊</span>
+          <span class="skill-name">Microsoft Excel</span>
+          <span class="skill-level" data-i18n="skill.intermediate">Intermediate</span>
+        </div>
+        <div class="skill-badge neu-card soft-skill">
+          <span class="skill-icon">🤝</span>
+          <span class="skill-name">Teamwork</span>
+          <span class="skill-level" data-i18n="skill.good">Good</span>
+        </div>
 
-        <div class="project-grid">
-          <article class="project-card glass-card reveal-up">
-            <div class="project-preview project-preview-image">
-              <img src="assets/terminal.png" alt="Terminal project preview">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03</span>
+        <h2 class="section-title" data-i18n="projects.title">Proyek</h2>
+      </div>
+      <p class="section-desc" data-i18n="projects.desc">Beberapa proyek yang pernah saya kerjakan dan sedang dikembangkan.</p>
+      <div class="projects-grid">
+
+        <!-- Project Card 1 -->
+        <div class="project-card neu-card">
+          <div class="project-header">
+            <span class="project-num">01</span>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JS</span>
             </div>
-            <h3 data-locale-key="projectPortfolioTitle">Portfolio Website</h3>
-            <p data-locale-key="projectPortfolioDesc">Website portfolio modern dengan dark/light mode, language switcher, dan animasi smooth.</p>
-            <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-          </article>
-          <article class="project-card glass-card reveal-up">
-            <div class="project-preview">CM</div>
-            <h3 data-locale-key="projectContactTitle">Contact Manager</h3>
-            <p data-locale-key="projectContactDesc">Konsep sistem penyimpanan pesan dan pengelolaan data kontak untuk website pribadi.</p>
-            <div class="chips"><span>PHP</span><span>MySQL</span><span>UI</span></div>
-          </article>
-          <article class="project-card glass-card reveal-up">
-            <div class="project-preview">UI</div>
-            <h3 data-locale-key="projectLandingTitle">Landing Page UI</h3>
-            <p data-locale-key="projectLandingDesc">Eksperimen desain landing page clean, premium, dan responsive untuk brand digital.</p>
-            <div class="chips"><span>Figma</span><span>CSS</span><span>Responsive</span></div>
-          </article>
+          </div>
+          <h3 class="project-title" data-i18n="proj1.title">Portfolio Website</h3>
+          <p class="project-desc" data-i18n="proj1.desc">Website portfolio personal dengan desain Neubrutalism yang modern dan responsif. Dilengkapi fitur dark mode dan toggle bahasa.</p>
+          <a href="#" class="btn btn-sm" data-i18n="proj.view">Lihat Proyek →</a>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card neu-card">
+          <div class="project-header">
+            <span class="project-num">02</span>
+            <div class="project-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+          <h3 class="project-title" data-i18n="proj2.title">Sistem Manajemen Data</h3>
+          <p class="project-desc" data-i18n="proj2.desc">Aplikasi web sederhana untuk manajemen data menggunakan PHP dan MySQL. Dibuat sebagai project belajar back-end development.</p>
+          <a href="#" class="btn btn-sm" data-i18n="proj.view">Lihat Proyek →</a>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card neu-card">
+          <div class="project-header">
+            <span class="project-num">03</span>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+          <h3 class="project-title" data-i18n="proj3.title">Landing Page UI</h3>
+          <p class="project-desc" data-i18n="proj3.desc">Landing page statis yang didesain dengan konsep clean dan modern. Fokus pada tipografi, warna, dan layout yang responsif.</p>
+          <a href="#" class="btn btn-sm" data-i18n="proj.view">Lihat Proyek →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE & EDUCATION ========== -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04</span>
+        <h2 class="section-title" data-i18n="exp.title">Pengalaman & Pendidikan</h2>
+      </div>
+      <div class="experience-groups">
+        <div class="experience-group">
+          <h3 class="experience-group-title" data-i18n="exp.group.experience">Pengalaman</h3>
+          <div class="experience-list">
+
+            <!-- Experience Item -->
+            <div class="timeline-card neu-card">
+              <div class="timeline-meta">
+                <span class="timeline-badge work" data-i18n="exp.badge.work">Kerja</span>
+                <span class="timeline-date">Feb 2022 — May 2022</span>
+              </div>
+              <h3 class="timeline-title">Jakarta Konsultan Indonesia</h3>
+              <h4 class="timeline-role" data-i18n="exp.role.anggota">Anggota Tim</h4>
+              <p class="timeline-desc" data-i18n="exp.desc1">Mengembangkan kemampuan dalam Akuntansi menggunakan Microsoft Excel. Terlibat langsung dalam lingkungan kerja profesional dan belajar bekerja dalam tim.</p>
+            </div>
+
+            <!-- Organization Item 1 -->
+            <div class="timeline-card neu-card">
+              <div class="timeline-meta">
+                <span class="timeline-badge org" data-i18n="exp.badge.org">Organisasi</span>
+                <span class="timeline-date">Feb 2021 — <span data-i18n="exp.now">Sekarang</span></span>
+              </div>
+              <h3 class="timeline-title">Karang Taruna</h3>
+              <h4 class="timeline-role" data-i18n="exp.role.anggota">Anggota</h4>
+              <p class="timeline-desc" data-i18n="exp.desc2">Mengkoordinasi acara seperti "Sunday Market" di lingkungan RW. Bertanggung jawab dalam penggalangan dana dan perencanaan kegiatan.</p>
+            </div>
+
+            <!-- Organization Item 2 -->
+            <div class="timeline-card neu-card">
+              <div class="timeline-meta">
+                <span class="timeline-badge org" data-i18n="exp.badge.org">Organisasi</span>
+                <span class="timeline-date">Oct 2020 — <span data-i18n="exp.now">Sekarang</span></span>
+              </div>
+              <h3 class="timeline-title">IRMI — Ikatan Remaja Masjid Al-Ikhlas</h3>
+              <h4 class="timeline-role" data-i18n="exp.role.anggota">Anggota Aktif</h4>
+              <p class="timeline-desc" data-i18n="exp.desc3">Aktif dalam kegiatan mingguan dan tahunan. Mengelola penggalangan dana dan bertanggung jawab menjaga zakat pada Idul Fitri.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="experience-group">
+          <h3 class="experience-group-title" data-i18n="exp.group.education">Pendidikan</h3>
+          <div class="experience-list">
+
+            <!-- Education Item -->
+            <div class="timeline-card neu-card">
+              <div class="timeline-meta">
+                <span class="timeline-badge edu" data-i18n="exp.badge.edu">Pendidikan</span>
+                <span class="timeline-date">Jun 2020 — Mar 2023</span>
+              </div>
+              <h3 class="timeline-title">SMK Karya Teladan</h3>
+              <h4 class="timeline-role" data-i18n="exp.role.accountancy">Jurusan Akuntansi</h4>
+              <p class="timeline-desc" data-i18n="exp.desc4">Menempuh pendidikan vokasi dengan fokus pada Akuntansi. Membangun dasar yang kuat dalam logika keuangan dan analisis data.</p>
+            </div>
+
+            <!-- Education (University) -->
+            <div class="timeline-card neu-card highlight">
+              <div class="timeline-meta">
+                <span class="timeline-badge edu" data-i18n="exp.badge.edu">Pendidikan</span>
+                <span class="timeline-date">2023 — <span data-i18n="exp.now">Sekarang</span></span>
+              </div>
+              <h3 class="timeline-title">Universitas Indraprasta PGRI</h3>
+              <h4 class="timeline-role" data-i18n="exp.role.ti">Teknik Informatika</h4>
+              <p class="timeline-desc" data-i18n="exp.desc5">Sedang menempuh S1 Teknik Informatika. Belajar programming, algoritma, database, dan web development untuk menjadi software developer profesional.</p>
+            </div>
+
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section contact-section" id="contact">
-      <div class="container contact-grid">
-        <div class="reveal-up">
-          <div class="section-heading compact">
-            <span>04.</span>
-            <h2 data-locale-key="contactTitle">Kontak</h2>
+  <!-- ========== CONTACT ========== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05</span>
+        <h2 class="section-title" data-i18n="contact.title">Hubungi Saya</h2>
+      </div>
+      <p class="section-desc" data-i18n="contact.desc">Tertarik bekerja sama atau sekadar menyapa? Kirim pesan yuk!</p>
+
+      <div class="contact-grid">
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap neu-card">
+          <div class="form-group">
+            <label data-i18n="form.name">Nama</label>
+            <input type="text" id="formName" class="form-input" data-i18n-placeholder="form.namePh" placeholder="Nama kamu" />
           </div>
-          <p class="contact-text" data-locale-key="ctaIntro">Saya terbuka untuk proyek freelance, magang, dan peluang full-time. Mari berdiskusi!</p>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="formEmail" class="form-input" data-i18n-placeholder="form.emailPh" placeholder="email@kamu.com" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="form.message">Pesan</label>
+            <textarea id="formMessage" class="form-input form-textarea" data-i18n-placeholder="form.messagePh" placeholder="Tulis pesanmu di sini..."></textarea>
+          </div>
+          <button class="btn btn-primary btn-full" id="formSubmit" data-i18n="form.send">Kirim Pesan</button>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
           <div class="contact-links">
-            <a href="mailto:khalizhakam85@gmail.com">&#9993;&#65039; khalizhakam85@gmail.com</a>
-            <a href="tel:+6281585224508">&#128222; +62 815 8522 4508</a>
-            <a href="https://github.com/kaguray85" target="_blank" rel="noopener">&#128187; GitHub</a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener">&#128279; LinkedIn</a>
+            <a href="mailto:khalizhakam85@gmail.com" class="contact-link neu-card">
+              <span class="contact-icon">📧</span>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">khalizhakam85@gmail.com</div>
+              </div>
+            </a>
+            <a href="https://wa.me/6281585224508" target="_blank" rel="noopener noreferrer" class="contact-link neu-card">
+              <span class="contact-icon">💬</span>
+              <div>
+                <div class="contact-label">WhatsApp</div>
+                <div class="contact-value">+62 815-8522-4508</div>
+              </div>
+            </a>
+            <a href="https://github.com/kaguray85" target="_blank" class="contact-link neu-card">
+              <span class="contact-icon">💻</span>
+              <div>
+                <div class="contact-label">GitHub</div>
+                <div class="contact-value">kaguray85</div>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/khal1z_?igsh=MXd4cWMzb3d0OHFiYg==" target="_blank" class="contact-link neu-card">
+              <span class="contact-icon">📸</span>
+              <div>
+                <div class="contact-label">Instagram</div>
+                <div class="contact-value">@khaliz.dev</div>
+              </div>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="contact-link neu-card">
+              <span class="contact-icon">💼</span>
+              <div>
+                <div class="contact-label">LinkedIn</div>
+                <div class="contact-value">Muhammad Khaliz Hakam</div>
+              </div>
+            </a>
           </div>
         </div>
-        <form class="contact-form glass-card reveal-right" id="contact-form">
-          <label><span data-locale-key="nameLabel">Nama</span><input type="text" name="name" data-locale-placeholder="namePlaceholder" placeholder="Nama kamu" required></label>
-          <label><span data-locale-key="emailLabel">Email</span><input type="email" name="email" data-locale-placeholder="emailPlaceholder" placeholder="email@example.com" required></label>
-          <label><span data-locale-key="messageLabel">Pesan</span><textarea name="message" rows="5" data-locale-placeholder="messagePlaceholder" placeholder="Tulis pesan kamu..." required></textarea></label>
-          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-          <button type="submit" class="btn btn-primary" data-locale-key="sendMessage">Kirim Pesan</button>
-        </form>
-      </div>
-    </section>
-  </main>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Muhammad Khaliz Hakam. Built with HTML, CSS & JavaScript.</p>
-      <a href="#home">Back to top</a>
+      <div class="footer-left">
+        <span class="footer-logo">
+          <img src="assets/favicon-khaliz.png" alt="KHALIZ logo" class="footer-logo-img" />
+        </span>
+        <p class="footer-tagline" data-i18n="footer.tagline">Dibuat dengan ❤️ oleh Muhammad Khaliz Hakam</p>
+      </div>
+      <div class="footer-right">
+        <p class="footer-copy" data-i18n="footer.copy">© 2024 KHALIZ. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
