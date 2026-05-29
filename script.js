@@ -49,8 +49,8 @@ const translations = {
     "proj1.desc":     "Website portfolio personal dengan desain Neubrutalism yang modern dan responsif. Dilengkapi fitur dark mode dan toggle bahasa.",
     "proj2.title":    "Sistem Manajemen Data",
     "proj2.desc":     "Aplikasi web sederhana untuk manajemen data menggunakan PHP dan MySQL. Dibuat sebagai project belajar back-end development.",
-    "proj3.title":    "Landing Page UI",
-    "proj3.desc":     "Landing page statis yang didesain dengan konsep clean dan modern. Fokus pada tipografi, warna, dan layout yang responsif.",
+    "proj3.title":    "Learning Management System",
+    "proj3.desc":     "Sistem ini membantu guru mengelola materi, tugas, nilai, presensi, dan jadwal pelajaran, sementara siswa dapat mengakses pembelajaran dengan lebih mudah, terstruktur, dan fleksibel.",
     "proj.view":      "Lihat Proyek →",
 
     /* Certificates */
@@ -139,8 +139,8 @@ const translations = {
     "proj1.desc":     "A personal portfolio website with a modern and responsive Neubrutalism design. Includes dark mode and language toggle features.",
     "proj2.title":    "Data Management System",
     "proj2.desc":     "A simple web app for data management using PHP and MySQL. Built as a back-end development learning project.",
-    "proj3.title":    "Landing Page UI",
-    "proj3.desc":     "A static landing page designed with a clean and modern concept. Focused on typography, color, and responsive layout.",
+    "proj3.title":    "Learning Management System",
+    "proj3.desc":     "This system helps teachers manage materials, assignments, grades, attendance, and class schedules, while students can access learning more easily, structurally, and flexibly.",
     "proj.view":      "View Project →",
 
     /* Certificates */
