@@ -1,90 +1,171 @@
-# 🎨 KHALIZ — Portfolio Website
+# KHALIZ - Portfolio Website
 
-Website portfolio personal dengan desain **Neubrutalism** yang modern, bold, dan profesional.
+Website portfolio personal Muhammad Khaliz Hakam dengan desain Neubrutalism yang modern, responsif, dan mudah diperbarui.
 
----
+## Live Website
 
-## 📁 Struktur File
+- Website: https://porto-khaliz.vercel.app
+- Repository: https://github.com/kaguray85/Porto-Khaliz
+- GitHub account: https://github.com/kaguray85
+- Platform deploy: Vercel
 
+## Fitur Utama
+
+- Tampilan responsive untuk desktop, tablet, dan mobile.
+- Light mode dan dark mode.
+- Toggle bahasa Indonesia dan English.
+- Section profil, skill, proyek, sertifikat, pengalaman, pendidikan, dan kontak.
+- Tombol `Download CV` yang mengarah ke file PDF di `assets/cv-khaliz.pdf`.
+- Animasi scroll dan hamburger menu untuk layar kecil.
+
+## Struktur File
+
+```text
+Porto-Khaliz/
+|-- index.html              # Struktur utama website
+|-- style.css               # Styling, layout, warna, responsive design
+|-- script.js               # Theme, bahasa, menu, form, dan animasi
+|-- README.md               # Panduan proyek
+|-- PRD.md                  # Product Requirements Document
+|-- assets/
+|   |-- favicon-khaliz.png
+|   |-- profile-khaliz.jpg
+|   |-- sertifikat-barista.png
+|   |-- cv-khaliz.pdf
 ```
-portfolio/
-├── index.html     → Struktur utama website
-├── style.css      → Semua styling (Neubrutalism + dark/light mode)
-├── script.js      → Logic: theme toggle, bahasa, hamburger, form, animasi
-├── assets/
-│   └── profile.jpg  ← Letakkan foto kamu di sini!
-└── README.md
+
+## Cara Menjalankan di Laptop
+
+Website ini murni HTML, CSS, dan JavaScript. Tidak perlu install dependency.
+
+Cara paling mudah:
+
+1. Buka folder `Porto-Khaliz`.
+2. Klik dua kali file `index.html`.
+3. Website akan terbuka di browser.
+
+Alternatif memakai server lokal:
+
+```bash
+npx serve .
 ```
 
----
+## Cara Mengubah Konten
 
-## 🚀 Cara Menjalankan
+Edit teks utama di `index.html`.
 
-1. Download/extract semua file ke satu folder
-2. Letakkan foto profil kamu di `assets/profile.jpg`
-3. Buka `index.html` di browser — selesai!
+Bagian yang sering diubah:
 
-> ✅ Tidak butuh server atau install apapun. Murni HTML, CSS, JS.
+- Nama dan headline: cari `KHALIZ` atau `Muhammad Khaliz Hakam`.
+- Foto profil: ganti file `assets/profile-khaliz.jpg`.
+- CV: ganti file `assets/cv-khaliz.pdf`.
+- Sertifikat: ganti atau tambah gambar di folder `assets/`.
+- Link sosial media: edit bagian `contact` di `index.html`.
 
----
+Untuk teks yang berubah saat toggle bahasa, edit object `translations` di `script.js`.
 
-## 🌗 Fitur
+Contoh:
 
-| Fitur              | Keterangan                                      |
-|--------------------|-------------------------------------------------|
-| 🌞 Light / Dark Mode | Toggle tema dengan ikon matahari/bulan, disimpan di localStorage |
-| 🇮🇩 / 🇬🇧 Bahasa   | Toggle Bahasa Indonesia / English, disimpan di localStorage |
-| 📱 Responsive       | Mobile, tablet, laptop — semua tampil baik     |
-| 🍔 Hamburger Menu   | Otomatis muncul di layar kecil (mobile)        |
-| ✨ Scroll Animation | Elemen muncul perlahan saat di-scroll           |
-| 📧 Contact Form     | Form kirim pesan dengan validasi & notifikasi   |
+```js
+"hero.sticker": "Download CV"
+```
 
----
+## Cara Mengubah Tampilan
 
-## ✏️ Cara Edit Konten
+Edit `style.css`.
 
-Buka `index.html` dan ubah bagian berikut:
-
-- **Nama** → Cari `KHALIZ` atau `Muhammad Khaliz Hakam`
-- **Email** → Cari `khalizhakam85@gmail.com`
-- **No HP** → Tambahkan di section contact jika perlu
-- **Proyek** → Cari `proj1.title`, `proj2.title`, `proj3.title` di `script.js`
-- **Social Media** → Cari link GitHub, Instagram, LinkedIn di `index.html`
-
-Untuk **edit teks dua bahasa**, buka `script.js` dan edit object `translations`.
-
----
-
-## 🎨 Ubah Warna
-
-Buka `style.css` dan ubah CSS variables di bagian `:root`:
+Warna utama ada di bagian `:root`:
 
 ```css
---accent:    #FF5733;   /* Warna utama (merah-oranye) */
---accent-2:  #FFD60A;   /* Kuning cerah */
---accent-3:  #3BFF85;   /* Hijau neon */
---bg:        #F5F0E8;   /* Background terang */
+--accent: #ff6b4a;
+--accent-2: #ffd166;
+--accent-3: #4ade80;
+--bg: #f7f1e8;
 ```
 
----
+Bagian penting:
 
-## 📸 Foto Profile
+- Hero dan foto profil: cari `.hero`, `.photo-card`, `.photo-sticker`.
+- Tombol: cari `.btn`.
+- Responsive mobile: cari `@media`.
+- Footer: cari `.footer`.
 
-1. Siapkan foto kamu (disarankan ukuran **kotak/square**, min. 400×400px)
-2. Simpan sebagai `profile.jpg`
-3. Letakkan di folder `assets/`
-4. Refresh browser — foto langsung muncul!
+## Cara Update ke GitHub
 
-Jika foto belum ada, website akan menampilkan inisial **KH** sebagai placeholder.
+Pastikan berada di folder proyek:
 
----
+```bash
+cd Porto-Khaliz
+```
 
-## 📝 Catatan
+Cek perubahan:
 
-- Website ini **tidak butuh backend** — form contact hanya menampilkan notifikasi
-- Untuk mengirim email sungguhan, bisa gunakan [EmailJS](https://emailjs.com) atau [Formspree](https://formspree.io)
-- Hosting gratis: [Netlify Drop](https://app.netlify.com/drop), [Vercel](https://vercel.com), atau [GitHub Pages](https://pages.github.com)
+```bash
+git status
+```
 
----
+Tambahkan file yang ingin disimpan:
 
-Made with ❤️ for Muhammad Khaliz Hakam
+```bash
+git add index.html style.css script.js README.md PRD.md assets/cv-khaliz.pdf
+```
+
+Buat commit:
+
+```bash
+git commit -m "Update portfolio content"
+```
+
+Push ke GitHub:
+
+```bash
+git push origin main
+```
+
+Repository tujuan:
+
+```text
+https://github.com/kaguray85/Porto-Khaliz
+```
+
+## Cara Deploy atau Update Vercel
+
+Jika project Vercel sudah terhubung ke GitHub, biasanya deploy production akan berjalan otomatis setelah `git push origin main`.
+
+URL production:
+
+```text
+https://porto-khaliz.vercel.app
+```
+
+Jika ingin deploy manual lewat terminal:
+
+```bash
+npx vercel --prod --yes
+```
+
+Saat deploy berhasil, Vercel akan memberi URL preview dan production. Gunakan URL production utama:
+
+```text
+https://porto-khaliz.vercel.app
+```
+
+## Checklist Update Portfolio
+
+Gunakan checklist ini setiap ingin memperbarui codingan atau tampilan:
+
+1. Edit file yang dibutuhkan.
+2. Buka `index.html` dan cek tampilannya di browser.
+3. Pastikan tombol `Download CV` masih bisa membuka atau mengunduh PDF.
+4. Jalankan `git status`.
+5. Commit perubahan dengan pesan yang jelas.
+6. Push ke `main`.
+7. Cek hasil di Vercel: https://porto-khaliz.vercel.app
+
+## Catatan
+
+- File `.vercel/` tidak perlu di-commit karena berisi metadata lokal Vercel.
+- File log seperti `server.err.log` dan `server.out.log` tidak perlu dipush.
+- Contact form saat ini hanya validasi dan menampilkan notifikasi, belum mengirim email sungguhan.
+
+Made for Muhammad Khaliz Hakam.
