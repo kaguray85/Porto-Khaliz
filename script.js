@@ -21,7 +21,7 @@ const translations = {
     "hero.desc":      "Seorang beginner programmer yang suka membangun website yang bersih, modern, dan bermanfaat. Sedang belajar dan terus berkembang.",
     "hero.btn.projects": "Lihat Proyek",
     "hero.btn.contact":  "Hubungi Saya",
-    "hero.sticker":   "Developer",
+    "hero.sticker":   "Download CV",
     "hero.scroll":    "Scroll ke bawah",
 
     /* About */
@@ -89,7 +89,7 @@ const translations = {
 
     /* Footer */
     "footer.tagline":     "Dibuat dengan ❤️ oleh Muhammad Khaliz Hakam",
-    "footer.copy":        "© 2024 KHALIZ. All rights reserved.",
+    "footer.copy":        "© 2026 KHALIZ. All rights reserved.",
 
     /* Toast */
     "toast.success":      "✅ Pesan terkirim! Saya akan segera membalas.",
@@ -111,7 +111,7 @@ const translations = {
     "hero.desc":      "A beginner programmer who loves building clean, modern, and useful websites. Always learning and growing every day.",
     "hero.btn.projects": "View Projects",
     "hero.btn.contact":  "Contact Me",
-    "hero.sticker":   "Developer",
+    "hero.sticker":   "Download CV",
     "hero.scroll":    "Scroll down",
 
     /* About */
@@ -179,7 +179,7 @@ const translations = {
 
     /* Footer */
     "footer.tagline":     "Built with ❤️ by Muhammad Khaliz Hakam",
-    "footer.copy":        "© 2024 KHALIZ. All rights reserved.",
+    "footer.copy":        "© 2026 KHALIZ. All rights reserved.",
 
     /* Toast */
     "toast.success":      "✅ Message sent! I'll get back to you soon.",
